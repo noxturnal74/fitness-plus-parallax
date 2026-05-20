@@ -58,12 +58,49 @@
     .magnet { transition: transform .25s ease, border-color .25s ease, box-shadow .25s ease; }
     .magnet:hover { transform: translateY(-6px); border-color: rgba(216,161,58,.7); box-shadow: 0 24px 55px rgba(216,161,58,.14); }
     .parallax-float { transform: translate3d(0, calc(var(--scroll, 0) * -22px), 0); }
+
+    .brand-lockup {
+      display: inline-flex;
+      align-items: center;
+      gap: .72rem;
+      min-width: 0;
+    }
+    .brand-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 12px;
+      background: rgba(255, 255, 255, .10);
+      border: 1px solid rgba(255, 255, 255, .16);
+      padding: 6px;
+      flex: 0 0 auto;
+    }
+    .brand-logo.is-wide {
+      width: 72px;
+      border-radius: 10px;
+    }
+    .brand-lockup-text {
+      line-height: 1;
+      white-space: nowrap;
+    }
+    .hero-brand-logo {
+      width: 98px;
+      height: 98px;
+      object-fit: contain;
+      border-radius: 20px;
+      background: rgba(255, 255, 255, .11);
+      border: 1px solid rgba(255, 255, 255, .18);
+      padding: 14px;
+      backdrop-filter: blur(16px);
+      box-shadow: 0 24px 72px rgba(0, 0, 0, .35);
+    }
+
   </style>
 </head>
 <body class="font-body antialiased overflow-x-hidden">
   <nav id="nav" class="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-ink/70 backdrop-blur-xl">
     <div class="mx-auto flex h-20 max-w-7xl items-center justify-between px-5 lg:px-8">
-      <a href="#home" class="display text-2xl text-white">FITNESS <span class="text-brass">PLUS</span></a>
+      <a href="#home" class="display text-2xl text-white brand-lockup"><img src="https://fitnessplusindonesia.co.id/themes1/images/logo/logo.png" alt="Fitness Plus logo" class="brand-logo is-wide" loading="eager"><span class="brand-lockup-text">Fitness Plus</span></a>
       <div class="hidden items-center gap-8 lg:flex">
         <a href="#network" class="text-xs font-bold uppercase tracking-[.24em] text-white/60 hover:text-white">Network</a>
         <a href="#facilities" class="text-xs font-bold uppercase tracking-[.24em] text-white/60 hover:text-white">Facilities</a>
@@ -83,7 +120,8 @@
   <section id="home" class="hero grain relative min-h-screen overflow-hidden pt-28">
     <div class="mx-auto grid min-h-[calc(100vh-7rem)] max-w-7xl items-end gap-12 px-5 pb-16 lg:grid-cols-[1.1fr_.9fr] lg:px-8">
       <div class="relative z-10 reveal">
-        <p class="mb-5 inline-flex items-center gap-3 border border-brass/40 bg-ink/55 px-4 py-2 text-xs font-bold uppercase tracking-[.24em] text-brass backdrop-blur">
+        <img src="https://fitnessplusindonesia.co.id/themes1/images/logo/logo.png" alt="Fitness Plus logo" class="hero-brand-logo mb-7" loading="eager">
+          <p class="mb-5 inline-flex items-center gap-3 border border-brass/40 bg-ink/55 px-4 py-2 text-xs font-bold uppercase tracking-[.24em] text-brass backdrop-blur">
           <i class="fa-solid fa-bolt"></i> 24-Hour Mega Gym Network
         </p>
         <h1 class="display max-w-4xl text-6xl leading-[.95] text-white sm:text-7xl lg:text-9xl">ALWAYS POSITIVE. ALWAYS OPEN.</h1>
